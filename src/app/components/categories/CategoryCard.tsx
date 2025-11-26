@@ -17,9 +17,18 @@ export default function CategoryCard({
   fullscreen,
 }: any) {
 
+  type Task = {
+  id: string;
+  title: string;
+  completed: boolean;
+};
+
+
   const [tasks, setTasks] = useState(category.tasks ?? []);
   const isOpen = fullscreen === true;
 
+
+  
   useEffect(() => {
     setTasks(category.tasks ?? []);
   }, [category]);
@@ -86,7 +95,7 @@ export default function CategoryCard({
           {/* ADD TASK BUTTON */}
           <button
             onClick={() =>
-              setTasks(prev => [
+              setTasks((prev :Task[]) => [
                 {
                   id: Date.now().toString(),
                   title: "New Task",
