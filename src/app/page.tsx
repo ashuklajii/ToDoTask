@@ -140,7 +140,8 @@ export default function Page() {
         <button onClick={() => setTheme("gradient")} className="w-12 h-12 rounded-full border-2 border-white/40 bg-gradient-to-br from-blue-400 to-purple-400 shadow-xl transition-all hover:scale-110" />
       </div>
 
-      <div className="w-full sm:w-[414px] sm:h-[540px] border-4 border-dark rounded-3xl bg-dark relative overflow-hidden flex flex-col">
+      <div className="w-full h-[630px] sm:w-[414px] sm:h-[630px] border-4 border-dark border-opacity-85 rounded-3xl bg-dark relative overflow-hidden flex flex-col bg-opacity-85">
+
 
         {!activeCategory && (
           <div className="pt-3 px-2">
